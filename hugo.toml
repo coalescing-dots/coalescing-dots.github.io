@@ -1,6 +1,6 @@
-baseURL = 'https://syd-geek.github.io/quotidian/'
+baseURL = 'https://coalescing-dots.github.io/'
 locale = 'en-au'
-title = 'Quotidian'
+title = 'Coalescing Dots'
 enableGitInfo = true
 
 [markup.goldmark.renderer]
