@@ -1,5 +1,6 @@
 :root {
   color-scheme: dark;
+  font-size: 105%;
   --page-background: #000000;
   --text-color: #ffaa33;
   --accent-color: #ff6600;
@@ -273,7 +274,7 @@ a:hover {
   background: var(--badge-background);
   color: var(--text-color);
   font-family: monospace;
-  font-size: 7px;
+  font-size: 7.7px;
   font-weight: bold;
   line-height: 1.1;
   text-align: left;
@@ -297,7 +298,7 @@ a:hover {
 
 .badge-copy strong {
   color: var(--code-color);
-  font-size: 9px;
+  font-size: 9.9px;
 }
 
 .web-badge:hover {
