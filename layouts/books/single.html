@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <p><a href="{{ "books/" | relURL }}">&larr; Books</a></p>
+  <article>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.book_author }}<p>By {{ . }}</p>{{ end }}
+    {{ with .Params.rating }}
+      <p>Rating: <span class="book-rating">{{ if findRE "^[0-9]+$" (printf "%v" .) }}{{ range seq (int .) }}★{{ end }}{{ else }}{{ . }}{{ end }}</span></p>
+    {{ end }}
+    {{ with .Params.cover }}
+      <figure>
+        <img class="book-cover-thumbnail" src="{{ strings.TrimPrefix "/" . | relURL }}" alt="Cover of {{ $.Title }}" />
+        {{ with $.Params.cover_attribution }}<figcaption>{{ . }}</figcaption>{{ end }}
+      </figure>
+    {{ end }}
+    {{ .Content }}
+    {{ partial "connections.html" . }}
+  </article>
+{{ end }}

@@ -1,0 +1,19 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }} {{ $maps := where .RegularPages.ByTitle "Params.map" true }}
+
+<section class="zettel-all-notes" aria-labelledby="maps-heading">
+  <h2 id="maps-heading">Maps</h2>
+  {{ with $maps }}
+  <ul class="zettel-index">
+    {{ range . }}
+    <li class="zettel-entry">
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    </li>
+    {{ end }}
+  </ul>
+  {{ else }}
+  <p>No maps yet.</p>
+  {{ end }}
+</section>
+{{ end }}

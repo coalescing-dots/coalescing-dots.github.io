@@ -1,0 +1,53 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  {{ $type := .File.ContentBaseName }}
+  {{ $pages := where site.RegularPages "Type" $type }}
+
+  {{ if eq $type "books" }}
+    <ul>
+      {{ range $pages.ByDate.Reverse }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ with .Params.book_author }} — {{ . }}{{ end }}
+          {{ with .Params.rating }}
+            <span class="book-rating">{{ if findRE "^[0-9]+$" (printf "%v" .) }}{{ range seq (int .) }}★{{ end }}{{ else }}{{ . }}{{ end }}</span>
+          {{ else }}
+            <span class="no-stars">No Stars yet</span>
+          {{ end }}
+        </li>
+      {{ else }}
+        <li>No book reviews yet.</li>
+      {{ end }}
+    </ul>
+  {{ else if eq $type "dots" }}
+    {{ $maps := where $pages.ByTitle "Params.map" true }}
+    <section class="zettel-all-notes" aria-labelledby="maps-heading">
+      <h2 id="maps-heading">Maps</h2>
+      {{ with $maps }}
+        <ul class="zettel-index">
+          {{ range . }}
+            <li class="zettel-entry">
+              <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            </li>
+          {{ end }}
+        </ul>
+      {{ else }}
+        <p>No maps yet.</p>
+      {{ end }}
+    </section>
+  {{ else if eq $type "log" }}
+    <ul>
+      {{ range $pages.ByDate.Reverse }}
+        <li>
+          <a href="{{ .RelPermalink }}">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}:</time>{{ .Title }}
+          </a>
+        </li>
+      {{ else }}
+        <li>No posts yet.</li>
+      {{ end }}
+    </ul>
+  {{ end }}
+{{ end }}

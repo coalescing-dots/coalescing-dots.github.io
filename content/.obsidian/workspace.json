@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "7299ba138dc21d86",
+    "type": "split",
+    "children": [
+      {
+        "id": "c15b058e9498b84c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "23ba188892204019",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "map-sanatan-dharma.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "map-sanatan-dharma"
+            }
+          },
+          {
+            "id": "aa5f7ef90f41baa3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "isha-upanishad.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "isha-upanishad"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ca671c24e58b8e6e",
+    "type": "split",
+    "children": [
+      {
+        "id": "c78052071a144655",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6ba08dcc86a4a0b2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "6e0d07b785e7778f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "soph",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e93903748f32817a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "59b565ff72418336",
+    "type": "split",
+    "children": [
+      {
+        "id": "b959f77603c63ded",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ccf46e3c17ddc753",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "map-sanatan-dharma.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "fad6255a286c7342",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "map-sanatan-dharma.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "0177be7f2c7b8048",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "75fa20f540908c71",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "8e63da6a9f113505",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "map-sanatan-dharma.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "23ba188892204019",
+  "lastOpenFiles": [
+    "isha-upanishad.md",
+    "map-sanatan-dharma.md",
+    "brihadaranyaka.md",
+    "chandogya.md",
+    "aitareya.md",
+    "taittiriya.md",
+    "mundaka.md",
+    "mandukya.md",
+    "atharvaveda.md",
+    "prashna-upanishad.md",
+    "yajurveda.md",
+    "katha-upanishad.md",
+    "samveda.md",
+    "kena-upanishad.md",
+    "map-philosophy.md",
+    "sites-i-like.md",
+    "collectors-trap.md",
+    "how-i-take-notes.md",
+    "Untitled.md",
+    "sophies-world.md",
+    "2026-11-05.md",
+    "bombay-duck.md"
+  ]
+}

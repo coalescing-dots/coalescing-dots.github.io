@@ -1,0 +1,8 @@
+{{ define "main" }}
+  <p><a href="{{ "dots/" | relURL }}">&larr; Dots index</a></p>
+  <article>
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    {{ partial "connections.html" . }}
+  </article>
+{{ end }}

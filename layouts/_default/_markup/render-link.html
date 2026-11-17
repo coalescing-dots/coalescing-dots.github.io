@@ -1,0 +1,16 @@
+{{- $destination := .Destination -}}
+{{- $url := urls.Parse $destination -}}
+{{- if and (not $url.IsAbs) (strings.HasSuffix $url.Path ".md") -}}
+  {{- $target := path.Base $url.Path | strings.TrimSuffix ".md" -}}
+  {{- $pages := where site.RegularPages "File.ContentBaseName" $target -}}
+  {{- with index $pages 0 -}}
+    {{- $href := .RelPermalink -}}
+    {{- with $url.RawQuery }}{{ $href = printf "%s?%s" $href . }}{{ end -}}
+    {{- with $url.Fragment }}{{ $href = printf "%s#%s" $href . }}{{ end -}}
+    <a href="{{ $href }}"{{ with $.Title }} title="{{ . }}"{{ end }}>{{ $.Text | safeHTML }}</a>
+  {{- else -}}
+    <a href="{{ $destination | safeURL }}"{{ with $.Title }} title="{{ . }}"{{ end }}>{{ $.Text | safeHTML }}</a>
+  {{- end -}}
+{{- else -}}
+  <a href="{{ $destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- end -}}

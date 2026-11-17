@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="{{ "css/site.css" | relURL }}" />
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+      document.documentElement.dataset.theme =
+        savedTheme === "light" ? "light" : "dark";
+    </script>
+    <script src="{{ "js/theme.js" | relURL }}" defer></script>
+  </head>
+  <body>
+    <nav>
+      <button
+        id="theme-toggle"
+        type="button"
+        aria-label="Switch to light theme"
+        title="Switch to light theme"
+      >
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.8"
+          />
+        </svg>
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle
+            cx="12"
+            cy="12"
+            r="4"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          />
+          <path
+            d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-width="1.8"
+          />
+        </svg>
+      </button>
+      <a href="{{ .Site.BaseURL }}">Home</a>
+      <a href="{{ "log/" | relURL }}">Log</a>
+      <a href="{{ "dots/" | relURL }}">Dots</a>
+      <a href="{{ "books/" | relURL }}">Books</a>
+    </nav>
+
+    <main>{{ block "main" . }}{{ .Content }}{{ end }}</main>
+
+    <footer class="site-footer">
+      <div class="web-badges" aria-label="Web badges">
+        <span
+          class="web-badge"
+          role="img"
+          aria-label="Best viewed with curiosity"
+        >
+          <svg class="badge-icon" viewBox="0 0 22 22" aria-hidden="true">
+            <path fill="#cc99cc" d="M3 2h16v13H3z" />
+            <path fill="var(--page-background)" d="M5 4h12v9H5z" />
+            <path fill="var(--code-color)" d="M7 6h3v2H7zm5 0h3v2h-3zM8 10h6v1H8z" />
+            <path fill="var(--text-color)" d="M9 15h4v2h4v2H5v-2h4z" />
+          </svg>
+          <span class="badge-copy">BEST VIEWED<strong>CURIOUSLY</strong></span>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
