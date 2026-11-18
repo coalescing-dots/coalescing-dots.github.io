@@ -2,6 +2,7 @@ baseURL = 'https://coalescing-dots.github.io/'
 locale = 'en-au'
 title = 'Coalescing Dots'
 enableGitInfo = true
+disableHugoGeneratorInject = true
 
 [markup.goldmark.renderer]
 unsafe = true
