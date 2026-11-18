@@ -11,6 +11,8 @@
         savedTheme === "light" ? "light" : "dark";
     </script>
     <script src="{{ "js/theme.js" | relURL }}" defer></script>
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/schema.html" . }}
   </head>
   <body>
     <nav>
