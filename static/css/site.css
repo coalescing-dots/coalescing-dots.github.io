@@ -255,6 +255,24 @@ a:hover {
   border-top: 2px solid var(--accent-color);
 }
 
+.blinking-cursor {
+  display: inline-block;
+  color: var(--muted-color);
+  font-family: monospace;
+  animation: cursor-blink 1.75s ease-in infinite;
+}
+
+.shell-prompt {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+@keyframes cursor-blink {
+  to {
+    opacity: 0;
+  }
+}
+
 .web-badges {
   display: flex;
   flex-wrap: wrap;
